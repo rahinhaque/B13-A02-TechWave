@@ -368,3 +368,58 @@ body {
     box-shadow: 0 4px 10px rgba(255, 1, 222, 0.3); /* Slightly reduce shadow */
   }
 }
+
+/* ================= About Section ================= */
+.about-section {
+  background-color: #1a0b2e; /* Corrected BG color */
+  min-height: 50vh; /* Ensure vertical height for centering */
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertical middle alignment */
+  text-align: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  width: 90%; /* Ensure responsiveness */
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  /* Border removed as per user instruction */
+}
+
+.about-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  color: #bfaec9; /* Light purple-grey text */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.about-section .about-footer {
+  margin-top: 3rem;
+  color: #8c8195;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+}
