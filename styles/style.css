@@ -589,8 +589,130 @@ body {
     grid-column: auto !important; /* Reset all column spans */
     grid-row: auto !important; /* Reset all row spans */
   }
+}
 
-  .features-section h2 {
-    font-size: 2.5rem;
+/* ================= Featured Episodes Section ================= */
+.featured-section {
+  background-color: #1a0b2e; /* Continuing the dark theme */
+  padding: 4rem 1rem 6rem 1rem;
+  text-align: center;
+}
+
+.featured-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.episode-card {
+  background-color: #230e3d; /* Dark card background */
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px; /* Limit card width */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-wrapper iframe,
+.video-wrapper .video-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px; /* Adjust based on your asset size */
+  height: 60px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover .play-button-overlay {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.custom-play-btn {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.episode-content {
+  padding: 2rem; /* Increased padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.episode-content h3 {
+  font-size: 1.5rem; /* Increased title size */
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.episode-content p {
+  color: #bfaec9;
+  font-size: 1rem; /* Increased text size */
+  line-height: 1.6;
+  margin-bottom: 2rem; /* More space before footer */
+  flex-grow: 1;
+}
+
+.episode-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00ff88;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.episode-meta i {
+  font-size: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .featured-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .episode-card {
+    max-width: 100%; /* Full width on mobile */
   }
 }
