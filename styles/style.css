@@ -474,8 +474,16 @@ body {
 
 @media (max-width: 768px) {
   .stats-container {
-    flex-direction: column; /* Stack on mobile */
-    gap: 2rem;
-    border: none; /* Often removed on mobile, but can keep if requested. keeping responsive layout mainly */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 2rem 1rem;
+   
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    margin: 0 1rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2.5rem; /* Slightly smaller for mobile */
   }
 }
