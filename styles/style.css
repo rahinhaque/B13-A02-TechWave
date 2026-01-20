@@ -423,3 +423,59 @@ body {
     font-size: 2rem;
   }
 }
+
+/* ================= Stats Section ================= */
+.stats-section {
+  background-color: #1a0b2e;
+  padding: 0 1rem 4rem 1rem;
+  text-align: center;
+}
+
+.stats-divider {
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle horizontal separation line */
+}
+
+.stats-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #00ff88; /* Bright Green */
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-item h3 i {
+  font-size: 2rem; /* Star icon size */
+  vertical-align: middle;
+}
+
+.stat-item p {
+  color: #bfaec9;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column; /* Stack on mobile */
+    gap: 2rem;
+    border: none; /* Often removed on mobile, but can keep if requested. keeping responsive layout mainly */
+  }
+}
