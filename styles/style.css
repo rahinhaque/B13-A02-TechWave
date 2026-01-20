@@ -1,131 +1,370 @@
 :root {
-    --bg-color: #1a0b2e; /* Dark purple background */
-    --text-color: #ffffff;
-    --nav-text-color: #cccccc;
-    --logo-tech-color: #ffffff;
-    --accent-gradient: linear-gradient(90deg, #ffc837 0%, #ff8008 30%, #ff01de 100%); /* Button gradient */
-    --logo-gradient: linear-gradient(90deg, #ff8a00 0%, #e52e71 100%); /* 'Wave' text gradient - approximated */
+  --bg-color: #1a0b2e; /* Dark purple background */
+  --text-color: #ffffff;
+  --nav-text-color: #cccccc;
+  --logo-tech-color: #ffffff;
+  --accent-gradient: linear-gradient(
+    90deg,
+    #ffc837 0%,
+    #ff8008 30%,
+    #ff01de 100%
+  ); /* Button gradient */
+  --logo-gradient: linear-gradient(
+    90deg,
+    #ff8a00 0%,
+    #e52e71 100%
+  ); /* 'Wave' text gradient - approximated */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 3rem;
-    background-color: #160a23; /* Slightly different shade for container if needed, matches image dark bg */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem; /* Default for tablets/small laptops */
+  background-color: #160a23;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 1.5rem 200px; /* Requested 200px margin/padding for large devices */
+  }
 }
 
 /* Logo Styles */
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-left: 200px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .logo .tech {
-    color: var(--logo-tech-color);
+  color: var(--logo-tech-color);
 }
 
 .logo .wave {
-    background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%); /* Fallback */
-    background: linear-gradient(to right, #ff7170, #ff00cc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #ff9a9e 0%,
+    #fecfef 99%,
+    #feada6 100%
+  ); /* Fallback */
+  background: linear-gradient(to right, #ff7170, #ff00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-
+/* Nav Links Styles */
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
 }
 
 .nav-links li a {
-    text-decoration: none;
-    color: var(--nav-text-color);
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--nav-text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-
+/* Actions Styles */
 .nav-actions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .subscribe-btn {
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%); /* Fallback */
-    background: linear-gradient(93deg, #ffcf26 0%, #ff4d99 50%, #b32bec 100%);
-    padding: 0.6rem 1.4rem;
-    border-radius: 50px;
-    margin-right: 200px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%); /* Fallback */
+  background: linear-gradient(93deg, #ffcf26 0%, #ff4d99 50%, #b32bec 100%);
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .subscribe-btn:hover {
-    transform: translateY(-1px);
-    opacity: 0.95;
+  transform: translateY(-1px);
+  opacity: 0.95;
 }
 
 .subscribe-btn i {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
-
+/* Mobile Icon */
 .mobile-menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    color: #a0a0a0; 
-    cursor: pointer;
-    border: 1px solid rgba(255,255,255, 0.1);
-    padding: 5px 8px;
-    border-radius: 4px;
+  display: none;
+  font-size: 1.5rem;
+  color: #a0a0a0; /* Grayish icon color from 2nd image */
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 8px;
+  border-radius: 4px;
 }
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 1.2rem 1.5rem;
-        border: 2px solid #007bff;  
-        border: none;
-        background-color: #0f0518;
-    }
+  .navbar {
+    padding: 1.2rem 1.5rem;
+    border: 2px solid #007bff; /* Just outline to match the 2nd image style showing it's a mobile view with container border? Or maybe that was just selection in the image. I'll omit the blue border unless asked, assuming it was a screenshot selection. */
+    /* Actually looking at the 2nd image, the blue outline looks like a screenshot selection border, I will stick to the aesthetic content. */
+    border: none;
+    background-color: #0f0518;
+  }
 
-    .nav-links {
-        display: none; 
-    }
+  .nav-links {
+    display: none; /* Hide links on mobile */
+  }
 
-    .subscribe-btn {
-        display: none;
-    }
+  .subscribe-btn {
+    display: none; /* Hide subscribe button on mobile */
+  }
 
-    .mobile-menu-icon {
-        display: block;
-    }
+  .mobile-menu-icon {
+    display: block; /* Show hamburger menu */
+  }
+}
+
+/* ================= Hero Section ================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 85vh; /* Occupy most of the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+.hero-bg-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1800px; /* User requested size */
+  height: 760px; /* User requested size */
+  object-fit: contain;
+  z-index: 0; /* Behind circle */
+  pointer-events: none;
+  opacity: 1;
+}
+
+.hero-visuals {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure visuals layer is set */
+  width: 100%; /* Ensure container spans to allow centering reference */
+}
+
+.circle-container {
+  position: relative;
+  width: 350px; /* User requested size for large device */
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Content above wave */
+}
+
+.hero-circle {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.mic-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%; /* Slightly smaller relative to circle */
+  height: auto;
+  z-index: 3;
+}
+
+.new-badge {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  background-color: #00ff88;
+  color: #1a0b2e;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 4;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+}
+
+.hero-content .subtitle {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-spotify {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  /* Exact gradient from image: Left Yellow/Orange -> Right Pink/Purple */
+  background: linear-gradient(90deg, #ffc837 0%, #ff01de 100%);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 1, 222, 0.3);
+}
+
+.btn-spotify:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 1, 222, 0.4);
+}
+
+.btn-subscribe-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: transparent; /* Dark background from body */
+  border: 1px solid #00d26a; /* Vibrant Green border */
+  color: #00d26a;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-subscribe-hero:hover {
+  background-color: rgba(0, 210, 106, 0.1);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Responsiveness for Hero */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-section {
+    min-height: 70vh; /* Adjust height for mobile */
+    padding: 3rem 1rem;
+  }
+
+  .hero-bg-wave {
+    width: 100%; /* Reset width to rely on scale */
+    max-width: none;
+    position: absolute; /* Force absolute to ensure centering works */
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3); /* User requested scale */
+    opacity: 0.6; /* User requested opacity */
+    pointer-events: none;
+  }
+
+  .circle-container {
+    width: 180px; /* User requested size */
+    height: 180px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .hero-content .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* Keep buttons in a row */
+    gap: 0.8rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Adjust buttons to fit in one row */
+  .btn-spotify,
+  .btn-subscribe-hero {
+    padding: 0.8rem 1.2rem; /* Reduce horizontal padding */
+    font-size: 0.9rem;
+    white-space: nowrap; /* Prevent text wrapping */
+    flex: 1; /* Make them share width evenly or fill available space */
+    justify-content: center; /* Center content in button */
+  }
+
+  .btn-spotify {
+    box-shadow: 0 4px 10px rgba(255, 1, 222, 0.3); /* Slightly reduce shadow */
+  }
 }
