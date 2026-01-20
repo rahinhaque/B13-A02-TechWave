@@ -2,6 +2,8 @@
 
 TechWave is a modern, responsive website designed for a tech-focused podcast. It features a sleek, dark-themed UI with vibrant gradients and interactive elements, built to showcase podcast episodes, host information, and community statistics.
 
+Live link : https://rahinhaque.github.io/B13-A02-TechWave/
+
 ![TechWave Preview](https://i.ibb.co.com/Psv8bWxr/Home-Desktop.png)
 
 ## Features
