@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #1a0b2e; /* Dark purple background */
+  --bg-color: #1a0b2e;
   --text-color: #ffffff;
   --nav-text-color: #cccccc;
   --logo-tech-color: #ffffff;
@@ -8,12 +8,12 @@
     #ffc837 0%,
     #ff8008 30%,
     #ff01de 100%
-  ); /* Button gradient */
+  ); 
   --logo-gradient: linear-gradient(
     90deg,
     #ff8a00 0%,
     #e52e71 100%
-  ); /* 'Wave' text gradient - approximated */
+  ); 
 }
 
 * {
@@ -32,14 +32,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem; /* Default for tablets/small laptops */
-  background-color: #160a23;
+  padding: 1.5rem 3rem; 
+  background-color: #1A0B2E;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @media (min-width: 1200px) {
   .navbar {
-    padding: 1.5rem 200px; /* Requested 200px margin/padding for large devices */
+    padding: 1.5rem 200px;
   }
 }
 
@@ -60,7 +60,7 @@ body {
     #ff9a9e 0%,
     #fecfef 99%,
     #feada6 100%
-  ); /* Fallback */
+  ); 
   background: linear-gradient(to right, #ff7170, #ff00cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -94,7 +94,7 @@ body {
 .subscribe-btn {
   text-decoration: none;
   color: white;
-  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%); /* Fallback */
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
   background: linear-gradient(93deg, #ffcf26 0%, #ff4d99 50%, #b32bec 100%);
   padding: 0.6rem 1.4rem;
   border-radius: 50px;
@@ -121,7 +121,7 @@ body {
 .mobile-menu-icon {
   display: none;
   font-size: 1.5rem;
-  color: #a0a0a0; /* Grayish icon color from 2nd image */
+  color: #a0a0a0;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 5px 8px;
@@ -132,22 +132,21 @@ body {
 @media (max-width: 768px) {
   .navbar {
     padding: 1.2rem 1.5rem;
-    border: 2px solid #007bff; /* Just outline to match the 2nd image style showing it's a mobile view with container border? Or maybe that was just selection in the image. I'll omit the blue border unless asked, assuming it was a screenshot selection. */
-    /* Actually looking at the 2nd image, the blue outline looks like a screenshot selection border, I will stick to the aesthetic content. */
+    border: 2px solid #007bff; 
     border: none;
     background-color: #0f0518;
   }
 
   .nav-links {
-    display: none; /* Hide links on mobile */
+    display: none; 
   }
 
   .subscribe-btn {
-    display: none; /* Hide subscribe button on mobile */
+    display: none;
   }
 
   .mobile-menu-icon {
-    display: block; /* Show hamburger menu */
+    display: block;
   }
 }
 
@@ -155,7 +154,7 @@ body {
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 85vh; /* Occupy most of the screen */
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,10 +170,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1800px; /* User requested size */
-  height: 760px; /* User requested size */
+  width: 1800px;
+  height: 760px;
   object-fit: contain;
-  z-index: 0; /* Behind circle */
+  z-index: 0; 
   pointer-events: none;
   opacity: 1;
 }
@@ -185,18 +184,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1; /* Ensure visuals layer is set */
-  width: 100%; /* Ensure container spans to allow centering reference */
+  z-index: 1;
+  width: 100%; 
 }
 
 .circle-container {
   position: relative;
-  width: 350px; /* User requested size for large device */
+  width: 350px; 
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; /* Content above wave */
+  z-index: 2;
 }
 
 .hero-circle {
@@ -211,8 +210,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%; /* Slightly smaller relative to circle */
-  height: auto;
+  width: 40%;
   z-index: 3;
 }
 
@@ -266,7 +264,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  /* Exact gradient from image: Left Yellow/Orange -> Right Pink/Purple */
   background: linear-gradient(90deg, #ffc837 0%, #ff01de 100%);
   color: white;
   text-decoration: none;
@@ -289,8 +286,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  background-color: transparent; /* Dark background from body */
-  border: 1px solid #00d26a; /* Vibrant Green border */
+  background-color: transparent; 
+  border: 1px solid #00d26a; 
   color: #00d26a;
   text-decoration: none;
   padding: 0.8rem 2rem;
@@ -319,23 +316,23 @@ body {
   }
 
   .hero-section {
-    min-height: 70vh; /* Adjust height for mobile */
+    min-height: 70vh;
     padding: 3rem 1rem;
   }
 
   .hero-bg-wave {
-    width: 100%; /* Reset width to rely on scale */
+    width: 100%;
     max-width: none;
-    position: absolute; /* Force absolute to ensure centering works */
+    position: absolute; 
     top: 37%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.3); /* User requested scale */
-    opacity: 0.6; /* User requested opacity */
+    transform: translate(-50%, -50%) scale(1.3); 
+    opacity: 0.6;
     pointer-events: none;
   }
 
   .circle-container {
-    width: 180px; /* User requested size */
+    width: 180px; 
     height: 180px;
     margin-bottom: 0.5rem;
     position: relative;
@@ -354,44 +351,44 @@ body {
   }
 
   .hero-buttons {
-    flex-direction: row; /* Keep buttons in a row */
+    flex-direction: row; 
     gap: 0.8rem;
     width: 100%;
     align-items: center;
   }
 
-  /* Adjust buttons to fit in one row */
+ 
   .btn-spotify,
   .btn-subscribe-hero {
-    padding: 0.8rem 1.2rem; /* Reduce horizontal padding */
+    padding: 0.8rem 1.2rem; 
     font-size: 0.9rem;
-    white-space: nowrap; /* Prevent text wrapping */
-    flex: 1; /* Make them share width evenly or fill available space */
-    justify-content: center; /* Center content in button */
+    white-space: nowrap; 
+    flex: 1; 
+    justify-content: center;
   }
 
   .btn-spotify {
-    box-shadow: 0 4px 10px rgba(255, 1, 222, 0.3); /* Slightly reduce shadow */
+    box-shadow: 0 4px 10px rgba(255, 1, 222, 0.3);
   }
 }
 
 /* ================= About Section ================= */
 .about-section {
-  background-color: #1a0b2e; /* Corrected BG color */
-  min-height: 50vh; /* Ensure vertical height for centering */
+  background-color: #1a0b2e;
+  min-height: 50vh;
   padding: 4rem 1rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* Vertical middle alignment */
+  align-items: center;
   text-align: center;
 }
 
 .about-container {
   max-width: 1000px;
-  width: 90%; /* Ensure responsiveness */
+  width: 90%; 
   margin: 0 auto;
   padding: 3rem 2rem;
-  /* Border removed as per user instruction */
+
 }
 
 .about-section h2 {
@@ -402,7 +399,7 @@ body {
 }
 
 .about-section p {
-  color: #bfaec9; /* Light purple-grey text */
+  color: #bfaec9; 
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
@@ -440,7 +437,7 @@ body {
 .stats-divider {
   max-width: 1000px;
   margin: 0 auto 3rem auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle horizontal separation line */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stats-container {
@@ -460,13 +457,13 @@ body {
 .stat-item h3 {
   font-size: 3rem;
   font-weight: 800;
-  color: #00ff88; /* Bright Green */
+  color: #00ff88;
   margin-bottom: 0.5rem;
   line-height: 1;
 }
 
 .stat-item h3 i {
-  font-size: 2rem; /* Star icon size */
+  font-size: 2rem; 
   vertical-align: middle;
 }
 
@@ -481,7 +478,7 @@ body {
 @media (max-width: 768px) {
   .stats-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-columns: 1fr 1fr; 
     gap: 2rem 1rem;
 
     padding: 2rem 1rem;
@@ -490,7 +487,7 @@ body {
   }
 
   .stat-item h3 {
-    font-size: 2.5rem; /* Slightly smaller for mobile */
+    font-size: 2.5rem;
   }
 }
 
@@ -518,7 +515,7 @@ body {
 }
 
 .feature-card {
-  background-color: #351165; /* Updated card background color */
+  background-color: #351165;
   border-radius: 20px;
   padding: 3rem 2rem;
   text-align: left;
@@ -587,19 +584,19 @@ body {
 /* --- Mobile Responsiveness --- */
 @media (max-width: 900px) {
   .features-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr; 
     grid-template-rows: auto;
   }
 
   .feature-card {
-    grid-column: auto !important; /* Reset all column spans */
-    grid-row: auto !important; /* Reset all row spans */
+    grid-column: auto !important;
+    grid-row: auto !important; 
   }
 }
 
 /* ================= Featured Episodes Section ================= */
 .featured-section {
-  background-color: #1a0b2e; /* Continuing the dark theme */
+  background-color: #1a0b2e; 
   padding: 4rem 1rem 6rem 1rem;
   text-align: center;
 }
@@ -621,11 +618,11 @@ body {
 }
 
 .episode-card {
-  background-color: #230e3d; /* Dark card background */
+  background-color: #230e3d; 
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
-  max-width: 350px; /* Limit card width */
+  max-width: 350px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -638,7 +635,7 @@ body {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   cursor: pointer;
@@ -659,7 +656,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60px; /* Adjust based on your asset size */
+  width: 60px;
   height: 60px;
   z-index: 2;
   transition: transform 0.3s ease;
@@ -676,14 +673,14 @@ body {
 }
 
 .episode-content {
-  padding: 2rem; /* Increased padding for better spacing */
+  padding: 2rem; 
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .episode-content h3 {
-  font-size: 1.5rem; /* Increased title size */
+  font-size: 1.5rem;
   font-weight: 700;
   color: white;
   margin-bottom: 1rem;
@@ -692,9 +689,9 @@ body {
 
 .episode-content p {
   color: #bfaec9;
-  font-size: 1rem; /* Increased text size */
+  font-size: 1rem; 
   line-height: 1.6;
-  margin-bottom: 2rem; /* More space before footer */
+  margin-bottom: 2rem; 
   flex-grow: 1;
 }
 
@@ -719,7 +716,7 @@ body {
   }
 
   .episode-card {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 100%;
   }
 }
 
@@ -740,7 +737,7 @@ body {
 .host-card {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #22093a; /* Deep purple card bg */
+  background-color: #22093a;
   border-radius: 40px;
   padding: 4rem;
   display: flex;
@@ -756,7 +753,7 @@ body {
   height: 220px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+  border: 4px solid rgba(255, 255, 255, 0.05); 
 }
 
 .host-image {
@@ -805,14 +802,11 @@ body {
     transform 0.3s ease;
 }
 
-.social-link i {
-  font-size: 1.5rem;
-  background: -webkit-linear-gradient(135deg, #ffc837 0%, #ff01de 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent; /* Fallback */
-  transition: opacity 0.3s;
+.social-link img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .social-link:hover {
@@ -820,7 +814,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Responsive Host Section */
+
 @media (max-width: 768px) {
   .host-card {
     flex-direction: column;
@@ -840,5 +834,120 @@ body {
 
   .host-socials {
     justify-content: center;
+  }
+}
+
+
+.site-footer {
+  background-color: #230E3D;
+  position: relative;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+.waveform-svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  max-width: 40%;
+  height: 120px;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.waveform-left {
+  left: -50px;
+}
+
+.waveform-right {
+  right: -50px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 3.2rem;
+  margin-bottom: 0;
+  letter-spacing: -0.5px;
+}
+
+.footer-platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  align-items: center;
+  margin: 0;
+}
+
+.platform-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9b93a6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.platform-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.platform-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.copyright {
+  margin-top: 0.5rem;
+  color: #6b617a;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-logo {
+    font-size: 2.5rem;
+  }
+
+  .footer-platform-links {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  .waveform-svg {
+    width: 200px;
+    height: 80px;
+  }
+
+  .waveform-left {
+    left: -20px;
+  }
+
+  .waveform-right {
+    right: -20px;
   }
 }
