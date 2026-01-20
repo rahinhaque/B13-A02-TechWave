@@ -103,7 +103,9 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .subscribe-btn:hover {
@@ -272,7 +274,9 @@ body {
   border-radius: 50px;
   font-weight: 700;
   font-size: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   box-shadow: 0 4px 15px rgba(255, 1, 222, 0.3);
 }
 
@@ -293,7 +297,9 @@ body {
   border-radius: 50px;
   font-weight: 700;
   font-size: 1rem;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .btn-subscribe-hero:hover {
@@ -477,7 +483,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columns */
     gap: 2rem 1rem;
-    border: 2px dotted #2d6cdf; /* Blue dotted border on mobile */
+
     padding: 2rem 1rem;
     border-radius: 4px;
     margin: 0 1rem;
@@ -490,7 +496,7 @@ body {
 
 /* ================= Features Section ================= */
 .features-section {
-  background-color: #1a0b2e;
+  background-color: #230e3d;
   padding: 4rem 1rem 6rem 1rem;
   text-align: center;
 }
@@ -512,7 +518,7 @@ body {
 }
 
 .feature-card {
-  background-color: #230e3d; /* Updated card background color */
+  background-color: #351165; /* Updated card background color */
   border-radius: 20px;
   padding: 3rem 2rem;
   text-align: left;
@@ -714,5 +720,125 @@ body {
 
   .episode-card {
     max-width: 100%; /* Full width on mobile */
+  }
+}
+
+/* ================= Meet The Host Section ================= */
+.host-section {
+  background-color: #1a0b2e;
+  padding: 4rem 1rem 6rem 1rem;
+  text-align: center;
+}
+
+.host-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.host-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #22093a; /* Deep purple card bg */
+  border-radius: 40px;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.host-image-container {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+}
+
+.host-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.host-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.host-info h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.host-bio {
+  color: #bfaec9;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.host-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: transparent;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social-link i {
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(135deg, #ffc837 0%, #ff01de 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback */
+  transition: opacity 0.3s;
+}
+
+.social-link:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive Host Section */
+@media (max-width: 768px) {
+  .host-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .host-image-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .host-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .host-socials {
+    justify-content: center;
   }
 }
