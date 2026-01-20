@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #1a0b2e; /* Dark purple background */
+    --text-color: #ffffff;
+    --nav-text-color: #cccccc;
+    --logo-tech-color: #ffffff;
+    --accent-gradient: linear-gradient(90deg, #ffc837 0%, #ff8008 30%, #ff01de 100%); /* Button gradient */
+    --logo-gradient: linear-gradient(90deg, #ff8a00 0%, #e52e71 100%); /* 'Wave' text gradient - approximated */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: #160a23; /* Slightly different shade for container if needed, matches image dark bg */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-left: 200px;
+}
+
+.logo .tech {
+    color: var(--logo-tech-color);
+}
+
+.logo .wave {
+    background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%); /* Fallback */
+    background: linear-gradient(to right, #ff7170, #ff00cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+}
+
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-btn {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%); /* Fallback */
+    background: linear-gradient(93deg, #ffcf26 0%, #ff4d99 50%, #b32bec 100%);
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    margin-right: 200px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.subscribe-btn i {
+    font-size: 0.8rem;
+}
+
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: #a0a0a0; 
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255, 0.1);
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1.2rem 1.5rem;
+        border: 2px solid #007bff;  
+        border: none;
+        background-color: #0f0518;
+    }
+
+    .nav-links {
+        display: none; 
+    }
+
+    .subscribe-btn {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
